@@ -14,7 +14,12 @@
  * limitations under the License.
  */
 
+#include <screen/screen.h>
+#include <png.h>
 #include "pngreader.h"
+#include <string.h>
+
+
 
 PNGReader::PNGReader(FILE *file, screen_context_t context)
 	: m_context(context)

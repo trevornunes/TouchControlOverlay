@@ -15,6 +15,7 @@
  */
 
 #include "labelwindow.h"
+#include <png.h>
 #include "pngreader.h"
 
 LabelWindow *LabelWindow::create(screen_context_t context, int width, int height)

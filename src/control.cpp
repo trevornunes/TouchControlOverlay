@@ -17,11 +17,12 @@
 #include "control.h"
 #include "eventdispatcher.h"
 #include "label.h"
-#include "pngreader.h"
+#include <png.h>
 #include <math.h>
 #include <stdlib.h>
 
-#include <screen/screen.h>
+#include <pngreader.h>
+
 
 const static int TAP_THRESHOLD = 150000000L;
 const static int JITTER_THRESHOLD = 10;

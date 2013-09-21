@@ -17,7 +17,8 @@
 #include "label.h"
 #include "labelwindow.h"
 #include "control.h"
-#include "pngreader.h"
+#include <pngreader.h>
+
 
 Label::Label(screen_context_t context, int x, int y, unsigned width, unsigned height, char *imageFile)
 	: m_x(x)
@@ -34,10 +35,10 @@ Label::Label(screen_context_t context, int x, int y, unsigned width, unsigned he
 
 	if (file) {
 		// We have an image
-		PNGReader png(file, context);
-		if (png.doRead()) {
+		PNGReader p(file, context);
+		if (p.doRead()) {
 			m_window = LabelWindow::create(context, width, height);
-			m_window->draw(png);
+			m_window->draw(p);
 		}
 	}
 }
